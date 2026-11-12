@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Sidebar from './assets/Sidebar'
 import Dashboard from './assets/Dashboard'
 import Books from './assets/Books'
+import Members from './assets/Members'
 
 
 
@@ -16,6 +17,7 @@ function App() {
   <Routes>
     <Route path="/" element={<Dashboard />} />
     <Route path="/books" element={<Books />} />
+    <Route path="/members" element={<Members />} />
 </Routes>
   </main>
 </div>

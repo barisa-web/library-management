@@ -18,9 +18,10 @@ function Sidebar() {
     <i className="fa-solid fa-book mr-3"></i>
     Books
 </NavLink>
-    <a href="#" className="block py-3 px-4 rounded-lg hover:bg-slate-700">
-      Members
-    </a>
+    <NavLink to="/members" className="block py-3 px-4 rounded-lg hover:bg-slate-700">
+    <i className="fa-solid fa-users mr-3"></i>
+    Members
+</NavLink>
       <a href="#" className="block py-3 px-4 rounded-lg hover:bg-slate-700">
         <i className="fa-solid fa-bookmark mr-3"></i>
         Borrowed Books
