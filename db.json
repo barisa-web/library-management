@@ -7,7 +7,7 @@
       "category": "African Literature",
       "isbn": "9780385474542",
       "year": 1958,
-      "copies": 10
+      "copies": 11
     },
     {
       "id": "2",
@@ -40,6 +40,13 @@
       "phone": "0705907843",
       "membershipDate": "2026-03-05",
       "id": "4CxkefbDRg8"
+    },
+    {
+      "name": "BRAITONE BARISA",
+      "email": "thekingbrighton@gmail.com",
+      "phone": "0705509978",
+      "membershipDate": "2026-07-05",
+      "id": "Tt6jFgcIYcA"
     }
   ],
   "borrowings": [
@@ -49,9 +56,17 @@
       "memberId": "1",
       "borrowDate": "2026-11-01",
       "dueDate": "2026-11-15",
-      "status": "borrowed"
+      "status": "returned"
     }
   ],
-  "returns": [],
+  "returns": [
+    {
+      "borrowingId": "1",
+      "bookId": "1",
+      "memberId": "1",
+      "returnDate": "2026-11-13",
+      "id": "RKj8_NcwhZw"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

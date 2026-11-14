@@ -22,22 +22,22 @@ function Sidebar() {
     <i className="fa-solid fa-users mr-3"></i>
     Members
 </NavLink>
-      <a href="#" className="block py-3 px-4 rounded-lg hover:bg-slate-700">
+      <NavLink to="/borrowedbooks" className="block py-3 px-4 rounded-lg hover:bg-slate-700">
         <i className="fa-solid fa-bookmark mr-3"></i>
         Borrowed Books
-      </a>
-        <a href="#" className="block py-3 px-4 rounded-lg hover:bg-slate-700">
+      </NavLink>
+        <NavLink to="/returns" className="block py-3 px-4 rounded-lg hover:bg-slate-700">
           <i className="fa-solid fa-undo mr-3"></i>
           Returns
-        </a>
-          <a href="#" className="block py-3 px-4 rounded-lg hover:bg-slate-700">
+        </NavLink>
+          <NavLink to="/history" className="block py-3 px-4 rounded-lg hover:bg-slate-700">
             <i className="fa-solid fa-history mr-3"></i>
             History
-          </a>
-            <a href="#" className="block py-3 px-4 rounded-lg hover:bg-slate-700">
+          </NavLink>
+            <NavLink to="/settings" className="block py-3 px-4 rounded-lg hover:bg-slate-700">
               <i className="fa-solid fa-gear mr-3"></i>
               Settings
-            </a>
+            </NavLink>
 </nav>
 </div>
     </div>
