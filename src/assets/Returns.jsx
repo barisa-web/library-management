@@ -81,7 +81,15 @@ return (
 
                   <td className="p-4">{item.returnDate}</td>
 
-                  <td className="p-4">{item.fine || 0}</td>
+                  <td className="p-4">
+    <span className={`font-bold ${
+        Number(item.fine || 0) > 0
+        ? "text-red-600"
+        : "text-green-600"
+    }`}>
+        KSh {Number(item.fine || 0).toLocaleString()}
+    </span>
+</td>
 
                   <td className="p-4">
                     <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">

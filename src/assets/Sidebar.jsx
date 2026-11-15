@@ -1,9 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-function Sidebar() {
+function Sidebar({ onLogout }) {
   return (
-    <div>
+    <div className="fixed top-0 left-0 w-64 h-screen bg-slate-900 text-white p-5 overflow-y-auto">
  
 <div className="w-64 min-h-screen bg-slate-900 text-white p-5">
 <h2 className="text-xl font-bold mb-10">
@@ -39,6 +39,13 @@ function Sidebar() {
               Settings
             </NavLink>
 </nav>
+<button
+    onClick={onLogout}
+    className="w-full mt-8 py-3 px-4 rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold text-left transition-all"
+>
+    <i className="fa-solid fa-right-from-bracket mr-3"></i>
+    Logout
+</button>
 </div>
     </div>
   )

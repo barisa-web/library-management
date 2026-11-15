@@ -124,15 +124,18 @@ setRecentBorrowings(latestBorrowings);
     <tbody>
       {recentBorrowings.map(function (borrowing) {
 
-  const book = books.find(function (book) {
-    return book.id === borrowing.bookId;
-  });
-
-  const member = members.find(function (member) {
-  return member.id === borrowing.memberId;
+ const book = books.find(function (book) {
+    return String(book.id) === String(borrowing.bookId);
+});
+ const member = members.find(function (member) {
+    return String(member.id) === String(borrowing.memberId);
 });
 
-const today = new Date().toISOString().split("T")[0];
+const currentDate = new Date();
+
+const today = currentDate.getFullYear() + "-" +
+  String(currentDate.getMonth() + 1).padStart(2, "0") + "-" +
+  String(currentDate.getDate()).padStart(2, "0");
 
 const isOverdue =
   borrowing.status === "borrowed" &&

@@ -8,6 +8,13 @@ function Books() {
     const[author,setAuthor]=useState("")
     const[category,setCategory]=useState("")
     const[isbn,setIsbn]=useState("")
+    const [newTitle, setNewTitle] = useState("");
+const [newAuthor, setNewAuthor] = useState("");
+const [newCategory, setNewCategory] = useState("");
+const [newIsbn, setNewIsbn] = useState("");
+const [newYear, setNewYear] = useState("");
+const [newCopies, setNewCopies] = useState("");
+const [newImage, setNewImage] = useState("");
     useEffect(function () {
         fetch("http://localhost:3000/books")
             .then(response => response.json())
@@ -79,9 +86,144 @@ function Books() {
     console.error("Error updating book:", error);
 });
     }
+    function handleAddBook(e) {
+    e.preventDefault();
+
+    const newBook = {
+        title: newTitle,
+        author: newAuthor,
+        category: newCategory,
+        isbn: newIsbn,
+        year: Number(newYear),
+        copies: Number(newCopies),
+        image: newImage
+    };
+
+    fetch("http://localhost:3000/books", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newBook)
+    })
+    .then(response => response.json())
+    .then(data => {
+        setBooks(function(previousBooks) {
+            return [...previousBooks, data];
+        });
+
+        setNewTitle("");
+        setNewAuthor("");
+        setNewCategory("");
+        setNewIsbn("");
+        setNewYear("");
+        setNewCopies("");
+        setNewImage("");
+
+        alert("Book added successfully!");
+    });
+}
   return (
     <div>
         <h1 className="text-3xl font-bold p-6 text-slate-900">BOOK MANAGEMENT</h1>
+        <div className="bg-white p-6 rounded-xl shadow-md mb-8">
+
+    <h2 className="text-xl font-bold mb-5">
+        Add New Book
+    </h2>
+
+    <form onSubmit={handleAddBook}>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            <input
+                type="text"
+                placeholder="Book Title"
+                value={newTitle}
+                onChange={function(e) {
+                    setNewTitle(e.target.value);
+                }}
+                className="border p-3 rounded-lg"
+                required
+            />
+
+            <input
+                type="text"
+                placeholder="Author"
+                value={newAuthor}
+                onChange={function(e) {
+                    setNewAuthor(e.target.value);
+                }}
+                className="border p-3 rounded-lg"
+                required
+            />
+
+            <input
+                type="text"
+                placeholder="Category"
+                value={newCategory}
+                onChange={function(e) {
+                    setNewCategory(e.target.value);
+                }}
+                className="border p-3 rounded-lg"
+                required
+            />
+
+            <input
+                type="text"
+                placeholder="ISBN"
+                value={newIsbn}
+                onChange={function(e) {
+                    setNewIsbn(e.target.value);
+                }}
+                className="border p-3 rounded-lg"
+                required
+            />
+
+            <input
+                type="number"
+                placeholder="Published Year"
+                value={newYear}
+                onChange={function(e) {
+                    setNewYear(e.target.value);
+                }}
+                className="border p-3 rounded-lg"
+                required
+            />
+
+            <input
+                type="number"
+                placeholder="Available Copies"
+                min="0"
+                value={newCopies}
+                onChange={function(e) {
+                    setNewCopies(e.target.value);
+                }}
+                className="border p-3 rounded-lg"
+                required
+            />
+
+            <input
+                type="text"
+                placeholder="Image path e.g. /images/fall.jpg"
+                value={newImage}
+                onChange={function(e) {
+                    setNewImage(e.target.value);
+                }}
+                className="border p-3 rounded-lg md:col-span-2"
+            />
+
+        </div>
+
+        <button
+            type="submit"
+            className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold px-6 py-3 rounded-lg mt-5"
+        >
+            Add Book
+        </button>
+
+    </form>
+</div>
        {editingBookId !==null &&(
        <form  onSubmit={handleUpdate} className="bg-white rounded-lg shadow-xl text-sm text-gray-500 border border-gray-200 p-8 py-12 w-80 sm:w-[352px]">
     <div className="mt-4">
@@ -126,6 +268,11 @@ function Books() {
             {books.map(function (book) {
                 return (
                     <div key={book.id} className="bg-white p-5 rounded-xl shadow-sm hover:shadow-lg transition duration-300 border border-slate-200">
+                      <img
+                        src={book.image}
+                        alt={book.title}
+                        className="w-full h-56 object-contain rounded-lg mb-4"
+                          />
                         <h2 className="text-xl font-semibold mb-2">{book.title}</h2>
                         <p className="text-gray-700">Author: {book.author}</p>
                         <p className="text-gray-700">Category: {book.category}</p>

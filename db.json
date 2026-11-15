@@ -7,7 +7,8 @@
       "category": "African Literature",
       "isbn": "9780385474542",
       "year": 1958,
-      "copies": 11
+      "copies": 10,
+      "image": "/images/fall.jpeg"
     },
     {
       "id": "2",
@@ -16,7 +17,18 @@
       "category": "Self Help",
       "isbn": "9780735211292",
       "year": 2018,
-      "copies": 15
+      "copies": 13,
+      "image": "/images/atom.jpeg"
+    },
+    {
+      "title": "River and the source",
+      "author": "Magret ogola",
+      "category": "African",
+      "isbn": "907456322",
+      "year": 2015,
+      "copies": 3,
+      "image": "images/river.jpeg",
+      "id": "EZXb_y-KhoU"
     }
   ],
   "members": [
@@ -40,13 +52,6 @@
       "phone": "0705907843",
       "membershipDate": "2026-03-05",
       "id": "4CxkefbDRg8"
-    },
-    {
-      "name": "BRAITONE BARISA",
-      "email": "thekingbrighton@gmail.com",
-      "phone": "0705509978",
-      "membershipDate": "2026-07-05",
-      "id": "Tt6jFgcIYcA"
     }
   ],
   "borrowings": [
@@ -57,6 +62,46 @@
       "borrowDate": "2026-11-01",
       "dueDate": "2026-11-15",
       "status": "returned"
+    },
+    {
+      "bookId": "2",
+      "memberId": "1",
+      "borrowDate": "2026-11-14",
+      "dueDate": "2026-11-29",
+      "status": "borrowed",
+      "id": "YqQ-Zc71nOs"
+    },
+    {
+      "bookId": "2",
+      "memberId": "4CxkefbDRg8",
+      "borrowDate": "2026-11-14",
+      "dueDate": "2026-11-29",
+      "status": "borrowed",
+      "id": "R25fbOtEr20"
+    },
+    {
+      "bookId": "1",
+      "memberId": "1",
+      "borrowDate": "2026-11-14",
+      "dueDate": "2026-11-29",
+      "status": "borrowed",
+      "id": "MvWWGaCs4qE"
+    },
+    {
+      "bookId": "2",
+      "memberId": "1",
+      "borrowDate": "2026-11-14",
+      "dueDate": "2026-11-29",
+      "status": "returned",
+      "id": "8i211Kh6Nps"
+    },
+    {
+      "bookId": "1",
+      "memberId": "1",
+      "borrowDate": "2026-11-14",
+      "dueDate": "2026-11-29",
+      "status": "returned",
+      "id": "E6TyO8WoP6E"
     }
   ],
   "returns": [
@@ -66,7 +111,47 @@
       "memberId": "1",
       "returnDate": "2026-11-13",
       "id": "RKj8_NcwhZw"
+    },
+    {
+      "borrowingId": "E6TyO8WoP6E",
+      "bookId": "1",
+      "memberId": "1",
+      "returnDate": "2026-11-14",
+      "fine": 0,
+      "id": "s6_olVSRe00"
+    },
+    {
+      "borrowingId": "8i211Kh6Nps",
+      "bookId": "2",
+      "memberId": "1",
+      "returnDate": "2026-11-14",
+      "fine": 0,
+      "id": "rP0FqRFbMbo"
     }
   ],
+  "settings": [
+    {
+      "id": "1",
+      "libraryName": "LIBRARY MANAGEMENT SYSTEM",
+      "email": "library@gmail.com",
+      "phone": "",
+      "address": "",
+      "adminName": "BARISA",
+      "adminEmail": "barisabraitone@gmail.com",
+      "maxBooks": 5,
+      "borrowingDays": 14,
+      "finePerDay": 20,
+      "openingTime": "10:00",
+      "closingTime": "17:00"
+    }
+  ],
+  "admins": [
+  {
+    "id": "1",
+    "name": "Library Admin",
+    "email": "thekingbrighton@gmail.com",
+    "password": "1234"
+  }
+],
   "$schema": "./node_modules/json-server/schema.json"
 }
