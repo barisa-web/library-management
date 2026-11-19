@@ -125,6 +125,7 @@ const [newImage, setNewImage] = useState("");
 }
   return (
     <div>
+        <h1>Books available</h1>
         <h1 className="text-3xl font-bold p-6 text-slate-900">BOOK MANAGEMENT</h1>
         <div className="bg-white p-6 rounded-xl shadow-md mb-8">
 
