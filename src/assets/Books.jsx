@@ -202,7 +202,6 @@ const [newImage, setNewImage] = useState("");
                 className="border p-3 rounded-lg"
                 required
             />
-
             <input
                 type="text"
                 placeholder="Image path e.g. /images/fall.jpg"

@@ -7,7 +7,7 @@
       "category": "African Literature",
       "isbn": "9780385474542",
       "year": 1958,
-      "copies": 10,
+      "copies": 9,
       "image": "/images/fall.jpeg"
     },
     {
@@ -17,7 +17,7 @@
       "category": "Self Help",
       "isbn": "9780735211292",
       "year": 2018,
-      "copies": 13,
+      "copies": 12,
       "image": "/images/atom.jpeg"
     },
     {
@@ -26,7 +26,7 @@
       "category": "African",
       "isbn": "907456322",
       "year": 2015,
-      "copies": 3,
+      "copies": 2,
       "image": "images/river.jpeg",
       "id": "EZXb_y-KhoU"
     }
@@ -52,6 +52,13 @@
       "phone": "0705907843",
       "membershipDate": "2026-03-05",
       "id": "4CxkefbDRg8"
+    },
+    {
+      "name": "Hafsw Ahmed",
+      "email": "hafswaahmed@gmail.com",
+      "phone": "0734230978",
+      "membershipDate": "2026-11-01",
+      "id": "vilGfays4M4"
     }
   ],
   "borrowings": [
@@ -76,7 +83,7 @@
       "memberId": "4CxkefbDRg8",
       "borrowDate": "2026-11-14",
       "dueDate": "2026-11-29",
-      "status": "borrowed",
+      "status": "returned",
       "id": "R25fbOtEr20"
     },
     {
@@ -102,6 +109,54 @@
       "dueDate": "2026-11-29",
       "status": "returned",
       "id": "E6TyO8WoP6E"
+    },
+    {
+      "bookId": "2",
+      "memberId": "1",
+      "borrowDate": "2026-11-15",
+      "dueDate": "2026-11-29",
+      "status": "borrowed",
+      "id": "lwMNkobtT90"
+    },
+    {
+      "bookId": "2",
+      "memberId": "1",
+      "borrowDate": "2026-11-15",
+      "dueDate": "2026-11-29",
+      "status": "returned",
+      "id": "5HQcV0t-iyg"
+    },
+    {
+      "bookId": "2",
+      "memberId": "1",
+      "borrowDate": "2026-11-15",
+      "dueDate": "2026-11-29",
+      "status": "returned",
+      "id": "pX0kGB3AICw"
+    },
+    {
+      "bookId": "1",
+      "memberId": "vilGfays4M4",
+      "borrowDate": "2026-11-18",
+      "dueDate": "2026-12-02",
+      "status": "borrowed",
+      "id": "yrJAlSgbS3E"
+    },
+    {
+      "bookId": "2",
+      "memberId": "vilGfays4M4",
+      "borrowDate": "2026-11-18",
+      "dueDate": "2026-12-02",
+      "status": "borrowed",
+      "id": "y3IRyRYlQ8c"
+    },
+    {
+      "bookId": "EZXb_y-KhoU",
+      "memberId": "vilGfays4M4",
+      "borrowDate": "2026-11-18",
+      "dueDate": "2026-12-02",
+      "status": "borrowed",
+      "id": "HL1hCNxC4Dw"
     }
   ],
   "returns": [
@@ -127,6 +182,30 @@
       "returnDate": "2026-11-14",
       "fine": 0,
       "id": "rP0FqRFbMbo"
+    },
+    {
+      "borrowingId": "pX0kGB3AICw",
+      "bookId": "2",
+      "memberId": "1",
+      "returnDate": "2026-11-15",
+      "fine": 0,
+      "id": "fB2gN2qGm3s"
+    },
+    {
+      "borrowingId": "5HQcV0t-iyg",
+      "bookId": "2",
+      "memberId": "1",
+      "returnDate": "2026-11-18",
+      "fine": 0,
+      "id": "p3KWXQtj6Ho"
+    },
+    {
+      "borrowingId": "R25fbOtEr20",
+      "bookId": "2",
+      "memberId": "4CxkefbDRg8",
+      "returnDate": "2026-11-18",
+      "fine": 0,
+      "id": "Jy7cXHvQehw"
     }
   ],
   "settings": [
@@ -134,24 +213,24 @@
       "id": "1",
       "libraryName": "LIBRARY MANAGEMENT SYSTEM",
       "email": "library@gmail.com",
-      "phone": "",
+      "phone": " 0705509978",
       "address": "",
       "adminName": "BARISA",
       "adminEmail": "barisabraitone@gmail.com",
-      "maxBooks": 5,
+      "maxBooks": 4,
       "borrowingDays": 14,
-      "finePerDay": 20,
+      "finePerDay": 25,
       "openingTime": "10:00",
       "closingTime": "17:00"
     }
   ],
   "admins": [
-  {
-    "id": "1",
-    "name": "Library Admin",
-    "email": "thekingbrighton@gmail.com",
-    "password": "1234"
-  }
-],
+    {
+      "id": "1",
+      "name": "Library Admin",
+      "email": "thekingbrighton@gmail.com",
+      "password": "1234"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

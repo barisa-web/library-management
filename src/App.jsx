@@ -29,7 +29,6 @@ function App() {
     localStorage.removeItem("adminLoggedIn");
     setIsLoggedIn(false);
 }} />
-
   <main className="ml-64 w-[calc(100%-16rem)] min-h-screen">
     <Routes>
       <Route path="/" element={<Dashboard />} />

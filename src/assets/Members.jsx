@@ -93,7 +93,7 @@ function handleEdit(member) {
         <label className="block">Name</label>
         <input type="text"
         value={name} onChange={(e) => setName(e.target.value)} 
-        placeholder="type here" required
+        placeholder="eg.Barisa Braitone" required
             className="border border-gray-200 rounded w-full p-2 mt-1 outline-indigo-500"/>
     </div>
 
@@ -101,14 +101,14 @@ function handleEdit(member) {
         <label className="block">Email</label>
         <input type="email" 
         value={email} onChange={(e) => setEmail(e.target.value)}
-        placeholder="type here" required
+        placeholder="eg.thekingbrighton@gmail.com" required
             className="border border-gray-200 rounded w-full p-2 mt-1 outline-indigo-500"/>
     </div>
 <div className="mt-4">
         <label className="block">Phone</label>
         <input type="tel" 
         value={phone} onChange={(e) => setPhone(e.target.value)}
-        placeholder="type here" required
+        placeholder="eg.0705509978" required
             className="border border-gray-200 rounded w-full p-2 mt-1 outline-indigo-500"/>
     </div>
     <div className="mt-4">
