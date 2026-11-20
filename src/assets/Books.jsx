@@ -28,7 +28,7 @@ const [newImage, setNewImage] = useState("");
         })
         .then(response => {
             if (response.ok) {
-                setBooks(prevBooks => prevBooks.filter(book => book.id !== bookId));
+                setBooks(prevBooks => prevBooks.filter(book =>book.id === bookId));
             } else {
                 console.error("Failed to delete the book.");
             }
